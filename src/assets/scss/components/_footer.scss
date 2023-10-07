@@ -1,0 +1,16 @@
+// footer file start
+.footer{
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    .footerInfo{
+        font-size: 22px;
+        font-weight: 600;
+    }
+}

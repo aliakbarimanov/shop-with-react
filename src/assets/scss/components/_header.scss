@@ -1,0 +1,41 @@
+// header file start
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 30px 100px; 
+
+    .logo{
+        width: 50%;
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .navBar{
+        width: 50%;
+
+        .navList{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 0 0 100px;
+
+            .navItem{
+                a{
+                    font-size: 20px;
+                    font-weight: 600;
+                    padding: 10px 20px;
+
+                    &:hover{
+                        color: #077;
+                    }
+
+                    &.active{
+                        color: #770;
+                    }
+                }
+            }
+        }
+    }
+}
