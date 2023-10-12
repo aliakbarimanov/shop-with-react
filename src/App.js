@@ -1,4 +1,4 @@
-// import MainContext
+// import Context
 import { MainContext } from "./utils/MainContext";
 
 // import Routes

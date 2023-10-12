@@ -1,7 +1,14 @@
-// import Link
-import {Link} from "react-router-dom";
+// import Context
+import { useContext } from "react";
+import { Context } from "../utils/MainContext";
 
-const ShopCard = ({data}) => {
+// import Link
+import { Link } from "react-router-dom";
+
+const ShopCard = ({ data }) => {
+
+    const { addToCart } = useContext(Context);
+
     return (
         <li className="cardItem">
             <div className="cardImage">
@@ -16,6 +23,7 @@ const ShopCard = ({data}) => {
                     {data.details}
                 </p>
                 <Link to={`/product/${data.id}`} key={data.id}>Learn more...</Link>
+                <button className="addCartBtn" onClick={() => { addToCart(data) }}>Add to Cart</button>
             </div>
         </li>
     )

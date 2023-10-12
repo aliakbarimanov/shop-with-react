@@ -32,6 +32,7 @@ const Product = () => {
                 <p className="productInfo">
                     {data.details}
                 </p>
+                <button className="addCartBtn">Add to Cart</button>
             </div>
         </section>
     )

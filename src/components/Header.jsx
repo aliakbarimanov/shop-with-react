@@ -1,8 +1,11 @@
-// import NavLink
-import { NavLink, useNavigate } from "react-router-dom";
+// import Context
+import { Context } from "../utils/MainContext";
 
-// import useState
-import { useState } from "react";
+// import NavLink
+import { Link, NavLink, useNavigate } from "react-router-dom";
+
+// import useState, useContext
+import { useState, useContext } from "react";
 
 // import Cart Icon
 import { FaCartShopping } from "react-icons/fa6";
@@ -14,6 +17,7 @@ const Header = () => {
 
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
+    const {cart} = useContext(Context);
 
     return (
         <header className="header">
@@ -30,7 +34,12 @@ const Header = () => {
             </nav>
             <div className="cart">
                 <ul className={`cartList ${open && "active"}`}>
-                    <CartCard/>
+                    {
+                        cart.map((item)=>(
+                            <CartCard data={item} key={item.id}/>
+                        ))
+                    }
+                    <Link to="/cart">View Cart</Link>
                 </ul>
                 <div className="cartIcon">
                     <FaCartShopping onClick={()=>setOpen(!open)}/>

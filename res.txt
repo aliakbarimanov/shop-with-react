@@ -1,0 +1,20 @@
+<>
+  <li className="cartItem">
+    <div className="cartImage">
+      <img
+        src={cart.image}
+        alt={cart.title}
+      />
+    </div>
+    <div className="cartItemDetails">
+      <h4 className="cartItemTitle">{cart.title}</h4>
+      <p className="cartItemPrice">
+        <span>{cart.price}</span> $
+      </p>
+      <p className="cartItemQuantity">
+        Quantity: <span>121</span>
+      </p>
+    </div>
+  </li>
+  <Link to="/cart">View Cart</Link>
+</>
