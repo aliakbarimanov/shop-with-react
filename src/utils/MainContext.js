@@ -5,20 +5,24 @@ export const Context = createContext();
 export const MainContext = ({ children }) => {
     const [cart, setCart] = useState([]);
 
-
     const addToCart = (data) => {
-        
-        let existingCard = cart.find((item) => item.id === data.id );
 
-        if(existingCard){
-            setCart([...cart, { ...data, quantity: data.quantity++ }]);
-        }else{
+        let existingCard = cart.find((item) => item.id === data.id);
+
+        if (existingCard) {
+            const updatedCart = cart.filter((item) => {
+                if (existingCard.id === item.id) {
+                    return { ...item, quantity: item.quantity++ }
+                } else {
+                    return item;
+                }
+            });
+            setCart(updatedCart);
+
+        } else {
             setCart([...cart, { ...data, quantity: 1 }]);
         }
     }
-    
-    console.log(cart);
-
 
     const globalSates = {
         cart,

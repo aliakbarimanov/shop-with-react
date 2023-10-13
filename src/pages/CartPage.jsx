@@ -26,7 +26,7 @@ const CartPage = () => {
                 </p>
               </div>
               <p className="cartItemQuantity">
-                Quantity: <span>121</span>
+                Quantity: <span>{item.quantity}</span>
               </p>
             </div>
           </li>

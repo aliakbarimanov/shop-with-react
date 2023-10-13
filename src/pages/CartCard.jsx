@@ -14,7 +14,7 @@ const CartCard = ({ data }) => {
           <span>{data.price}</span> $
         </p>
         <p className="cartItemQuantity">
-          Quantity: <span>121</span>
+          Quantity: <span>{data.quantity}</span>
         </p>
       </div>
     </li>

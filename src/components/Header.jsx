@@ -5,7 +5,7 @@ import { Context } from "../utils/MainContext";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 // import useState, useContext
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 
 // import Cart Icon
 import { FaCartShopping } from "react-icons/fa6";
@@ -17,7 +17,7 @@ const Header = () => {
 
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
-    const {cart} = useContext(Context);
+    const { cart } = useContext(Context);
 
     return (
         <header className="header">
@@ -35,14 +35,14 @@ const Header = () => {
             <div className="cart">
                 <ul className={`cartList ${open && "active"}`}>
                     {
-                        cart.map((item)=>(
-                            <CartCard data={item} key={item.id}/>
+                        cart.map((item) => (
+                            <CartCard data={item} key={item.id} />
                         ))
                     }
                     <Link to="/cart">View Cart</Link>
                 </ul>
                 <div className="cartIcon">
-                    <FaCartShopping onClick={()=>setOpen(!open)}/>
+                    <FaCartShopping onClick={() => setOpen(!open)} />
                 </div>
             </div>
         </header>
