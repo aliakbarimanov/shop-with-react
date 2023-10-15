@@ -63,5 +63,41 @@
                 }
             }
         }
+
+        .removeCard {
+            font-size: 22px;
+            align-self: flex-start;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #900;
+        }
+    }
+
+    .cartTotals {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.1px solid #00000050;
+        padding: 10px 20px;
+
+        .totalProduct {
+            font-size: 18px;
+
+            span {
+                font-size: 22px;
+                font-weight: 700;
+            }
+        }
+
+        .totalPrice {
+            font-size: 18px;
+
+            span {
+                font-size: 22px;
+                font-weight: 700;
+            }
+        }
     }
 }

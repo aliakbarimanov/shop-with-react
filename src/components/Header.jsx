@@ -17,7 +17,7 @@ const Header = () => {
 
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
-    const { cart } = useContext(Context);
+    const { cart, productsSum, totalPrice } = useContext(Context);
 
     return (
         <header className="header">
@@ -39,6 +39,10 @@ const Header = () => {
                             <CartCard data={item} key={item.id} />
                         ))
                     }
+                    <div className="cardTotals">
+                        <p className="totalProduct">Total product: <span>{productsSum}</span></p>
+                        <p className="totalPrice">Total price: <span>{totalPrice}</span></p>
+                    </div>
                     <Link to="/cart">View Cart</Link>
                 </ul>
                 <div className="cartIcon">

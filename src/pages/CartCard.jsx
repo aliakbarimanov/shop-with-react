@@ -1,4 +1,10 @@
+// import Contexts
+import { useContext } from "react";
+import { Context } from "../utils/MainContext";
+
 const CartCard = ({ data }) => {
+
+  const { removeCard } = useContext(Context);
 
   return (
     <li className="cartItem">
@@ -17,6 +23,7 @@ const CartCard = ({ data }) => {
           Quantity: <span>{data.quantity}</span>
         </p>
       </div>
+      <button className="removeCard" onClick={() =>removeCard(data.id)}>X</button>
     </li>
   )
 }

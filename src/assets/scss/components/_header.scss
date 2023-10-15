@@ -69,6 +69,8 @@
                 padding: 10px 20px;
                 display: flex;
                 border-bottom: 0.1px solid #00000050;
+                justify-content: space-between;
+                align-items: center;
 
                 .cartImage {
                     width: 50%;
@@ -86,6 +88,7 @@
                     flex-direction: column;
                     align-items: flex-end;
                     gap: 15px;
+                    margin-right: 20px;
 
                     .cartItemTitle {
                         font-size: 22px;
@@ -108,6 +111,38 @@
                             font-size: 20px;
                             font-weight: 800;
                         }
+                    }
+                }
+
+                .removeCard {
+                    font-size: 22px;
+                    align-self: flex-start;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    color: #900;
+                }
+            }
+
+            .cardTotals {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border-bottom: 0.1px solid #00000050;
+
+                .totalProduct {
+                    span {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+
+                .totalPrice {
+                    span{
+                        font-size: 18px;
+                        font-weight: 600;
                     }
                 }
             }

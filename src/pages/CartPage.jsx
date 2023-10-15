@@ -5,7 +5,7 @@ import { Context } from "../utils/MainContext";
 
 const CartPage = () => {
 
-  const { cart } = useContext(Context);
+  const { cart, productsSum, removeCard, totalPrice } = useContext(Context);
 
   return (
     <section className="cartPage">
@@ -29,9 +29,14 @@ const CartPage = () => {
                 Quantity: <span>{item.quantity}</span>
               </p>
             </div>
+            <button className="removeCard" onClick={() => removeCard(item.id)}>X</button>
           </li>
         ))
       }
+      <div className="cartTotals">
+        <p className="totalProduct">Total product: <span>{productsSum}</span></p>
+        <p className="totalPrice">Total price: <span>{totalPrice}</span></p>
+      </div>
     </section >
   );
 };
